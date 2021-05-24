@@ -1,0 +1,66 @@
+<!DOCTYPE>
+<html>
+<head>
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+  <title>Aman Somani</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style>
+.ctn{
+
+  text-align: center;
+  width: auto;
+  /*margin-left: 20%;*/
+  padding: 3%;
+  overflow: auto;
+}
+.panel{
+    display: none;
+  }
+
+
+    </style>
+</head>
+<body>
+<br>
+  <nav>
+    <div align="right" style="font-size: 30px; margin-right: 20px;">
+     <a href="/login">Student Login</a>
+    </div>
+  </nav>
+
+	<br><br>
+  <h3>This is the main page . Here the admin can mass upload students and can update and delete student,in 'View students' section. Student can also login himself by clicking on 'Student login'. </h3><br>
+<div class="ctn" align="center">
+
+    <a href='/allstds'><button>View students</button></a>
+    <br><br><br>
+    
+    <button id='msg'>Upload students through CSV file</button>
+  </div>
+
+  <br><br>
+  <div align="center" class="panel">
+    <br>
+    <form class="form" method="post" action="/pssd">
+      <h3>Are you sure? </h3>
+      <button>Yes,submit data</button>
+    </form>
+  </div>
+
+
+  <script type="text/javascript">
+
+
+
+
+  $(document).ready(function(){
+    $('#msg').click(function(){
+      $('.panel').slideToggle(1000);
+    });
+  });
+</script>
+</body>
+</html>
