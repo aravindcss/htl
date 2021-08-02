@@ -36,8 +36,6 @@ const stdSchema= new mongoose.Schema({
 
 });
 
-
-
 const Record= new mongoose.model("Record",stdSchema);
 
 module.exports=Record;

@@ -1,22 +1,20 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <!-- CSS only -->
+
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-<!-- JavaScript Bundle with Popper -->
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
     <title>Student Login</title>
     <style type="text/css">
     	.form{
     		width: 30%;
-    		margin-right: 25%;
-    		margin-left:35%;
     		margin-top: 100px;
-    		border: 2px solid blue; 
-    		padding:25px; 
+    		border: 2px solid blue;
+    		padding:25px;
     	}
     </style>
 </head>
@@ -26,6 +24,7 @@
 		 <a href="/">Home</a>
 		</div>
 	</nav><br><br>
+    <div align="center">
 	<div class="form">
 	<form method='post' action='/logins'>
   <div class="mb-3">
@@ -41,5 +40,90 @@
 </form>
  <small style="color: red; font-weight: bold; padding-left: 20px;">{{error}}</small>
 </div>
+</div>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script
+    src="https://kit.fontawesome.com/64d58efce2.js"
+    crossorigin="anonymous"
+   ></script>
+    <link rel="stylesheet" href="styles.css"/>
+    <title>Registration</title>
+</head>
+<body>
+   <div class="container">
+       <div class="forms-container">
+        <div class="signin-signup">
+
+            <form  method='post' action='/logins'class="sign-in-form">
+            <h2 class="title">Sign in</h2>
+            <div class="input-field">
+             <i class="fas fa-user"></i>
+             <input type="text" name="email" placeholder="Enter email"/>
+            </div>
+            <div class="input-field">
+             <i class="fas fa-lock"></i>
+             <input type="password" name="password" placeholder="Enter password"/>
+            </div>
+            <input type="submit" class="btn" value="Login">
+
+            <div class="social-media">
+
+            </div>
+            </form>
+
+
+        <!--
+            <form action="#" class="sign-up-form">
+            <h2 class="title">Sign up</h2>
+            <div class="input-field">
+             <i class="fas fa-user"></i>
+             <input type="text" placeholder="Username"/>
+            </div>
+            <div class="input-field">
+                <i class="fas fa-envelope"></i>
+                <input type="email" placeholder="Email"/>
+            </div>
+            <div class="input-field">
+             <i class="fas fa-lock"></i>
+             <input type="password" placeholder="Password"/>
+            </div>
+            <input type="submit" class="btn" value="sign up">
+
+            <div class="social-media">
+               -->
+            </div>
+            </form>
+        </div>
+       </div>
+       <div class="panels-container">
+        <div class="panel left-panel">
+            <div class="content">
+                <!-- <h3>New Here?</h3>
+                <p>Lets join</p>
+                <button class="btn transparent" id="sign-up-button">Sign Up</button> -->
+            </div>
+            <img src="img/bg1.png" alt="" class="image">
+        </div>
+
+        <div class="panel right-panel">
+            <div class="content">
+                <!-- <h3>One of us</h3>
+                <p>Lets get into</p>
+                <button class="btn transparent" id="sign-in-button">Sign In</button> -->
+            </div>
+            <!-- <img src="img/images-4.jpeg" alt="" class="image"> -->
+        </div>
+       </div>
+   </div>
+ <!-- <script src="app.js"></script>    -->
 </body>
 </html>

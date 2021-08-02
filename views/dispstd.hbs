@@ -12,13 +12,16 @@
 	</style>
 </head>
 <body>
+	<nav align='right'>
+    <h3 style="margin-right: 2%; "><a href="/allstds" class="button"><span>Back</span></a></h3>
+  </nav><br>
 
 	
 	<br>
 	
 	<hr>
 	<ul style="list-style: none;">
-		<li>Student Name:{{firstName}} {{lastName}}</li>
+		<li>Employee Name:{{firstName}} {{lastName}}</li>
 		<li>Mobile Number:{{mobileNumber}}</li>
 		<li>Age:{{age}}</li>
 		<li>Login Credential:{{emailAddress}}</li>
@@ -29,14 +32,14 @@
 	
 	<br>
 <div>
-	<h2>Update Student</h2>
+	<h2>Update Employee</h2>
 	<div class="box">
 	<form method="post" action="/update/{{_id}}">
-		<label>Student's firstname:</label><input type="text" name="fname" value="{{firstName}}">
-		<label>Student's lastname:</label><input type="text" name="lname" value="{{lastName}}"><br><br>
+		<label>Firstname:</label><input type="text" name="fname" value="{{firstName}}">
+		<label>Lastname:</label><input type="text" name="lname" value="{{lastName}}"><br><br>
 		<label>Mobile Number:</label><input type="text" name="phn" value="{{mobileNumber}}"><br><br>
 		<label>Age:</label><input type="text" name="age" value="{{age}}"><br><br>
-		<label>Address:</label><textarea type="text" name="add" value="{{address}}"></textarea><br>
+		<label>Address:</label><textarea type="text" name="add" placeholder="{{address}}"></textarea><br>
 		<br>
 		<button>Update</button>
 	</form>

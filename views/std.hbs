@@ -2,14 +2,20 @@
 <html>
 <head>
 	<title>{{fname}} {{lname}}</title>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 </head>
+<style type="text/css">
 
+		.frm{
+			border: 2px solid blue;
+			width: 50%;
+			margin: 100px;
+		}
+	</style>
 <body>
 	<nav>
-		
+
 		<div align="right" style="font-size: 20px; margin: 30px;">
-		
+
 		<a class="btn btn-outline-warning" href="/">Home</a>
 		<a class="btn btn-outline-danger" href="/login">Log-Out</a>
 
@@ -19,14 +25,136 @@
 	<br>
 	<hr>
 	<ul style="list-style: none;">
-		<li>Student Name:{{fname}} {{lname}}</li>
+		<li>Employee Name:{{fname}} {{lname}}</li>
 		<li>Mobile Number:{{phone}}</li>
 		<li>Age:{{age}}</li>
 		<li>Login Credential:{{email}}</li>
-		<li>Id:{{id}}</li>
+		<li>Employee Id:{{id}}</li>
+		</ul>
+	<br>
+	<br>
+	<div align="center">
+		<div align="center" class=frm>
+		<form method="post" action="/foods">
+			<b>Add your food items here:</b><br><br>
+			<input type="hidden" name="e_name" value="{{fname}} {{lname}}">
+			<input type="hidden" name="e_id" value="{{id}}">
+			<br>
+			<b>Select meal type:</b><br>
+			<input type="radio" name="type" value="Breakfast"><label>Breakfast</label><br>
+			<input type="radio" name="type" value="Lunch"><label>Lunch</label><br>
+			<input type="radio" name="type" value="Dinner"><label>Dinner</label><br>
+			<br>
+			<label>Enter name of items in plate:</label><br><textarea name="name"></textarea><br><br>
+			<label>Enter the quantity of plates:</label><input type="number" id="qt" name="qty"><br><br>
+			<!-- <label>Enter amount per plate:</label><input type="number" name="amt" id="amount"><br><br>  -->
+			 <!-- <input type="hidden" name="total" id="ttl"> -->
+			<button onclick="calc()">Submit to admin</button><br><br>
+		</form>
+	</div>
+</div>
+	<script type="text/javascript">
 
-	</ul>
-	
+			function calc(){
+				var quantity=document.getElementById('qt').value;
+		var rate=document.getElementById('amount').value;
+		var total;
+		if(quantity>=0 && rate>=0){
+		     total=quantity*rate;
+			}
+			else{
+				quantity=0;
+				rate=0;
+				total=0;
+			}
+	   document.getElementById('ttl').value=total;
+	}
+
+	</script>
 </body>
 
 </html>
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Avanni">
+
+
+    <title>Donate food </title>
+
+
+
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/107525cc11.js"></script>
+   <style type="text/css">
+
+            .model{
+            box-shadow: 4px 3px 14px 7px lightgray;
+            width: 400px;
+            height: 400px;
+            position: absolute;
+            left: 50%;
+            top: 60%;
+            transform: translate(-50%, -50%);
+       }
+       input[type='text'],select{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid lightgray;
+    outline: none;
+  }
+/*  #btns{
+    display: none;
+  }*/
+        </style>
+
+</head>
+<body>
+    <div style="background-color: skyblue;" class="p-4">
+        <h4 class="p-2" style="float: left;">Welcome <span style="color: red;">{{fname}}</span> !</h4>
+        <div class="p-4">
+        <button class="btn btn-danger" style="float: right;">Logout</button>
+       </div>
+    </div>
+    </div>
+  <div id="form" class="model"><br>
+            <h4 class="text-center p-2" style="">Donate food</h4>
+        <form  action="/foods" method="post" style="padding: 30px;">
+					<input type="hidden" name="e_name" value="{{fname}} {{lname}}">
+					<input type="hidden" name="e_id" value="{{id}}">
+            <div>
+                <label for="meal">Select meal type</label>
+                <select  required>
+                    <option></option>
+                    <option name="type" value="breakfast">Breakfast</option>
+                    <option name="type" value="lunch">Lunch</option>
+                    <option name="type" value="dinner">Dinner</option>
+                </select>
+            </div>
+            <div class="mt-4" >
+                <label id="height">Name of items in plate</label><br>
+                <input type="text" name="name" id="height" required>
+            </div>
+            <div class="" style="padding-top: 10px;">
+                <label for="weight">Quantity of plates</label><br>
+                <input type="number"  name="qty" id="weight" required>
+            </div>
+            <div align="center" class="pt-4">
+                <input type="submit" id="submit" class="btn btn-success" name="submit" value="Donate" style="padding-left: 4em;padding-right: 4em;">
+            </div>
+        </form>
+
+
+</body>
+</html> -->

@@ -1,0 +1,87 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ========== Meta Tags ========== -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Avanni">
+
+    <!-- ========== Page Title ========== -->
+    <title>NGO | Home </title>
+
+    <!-- ========== Favicon Icon ========== -->
+
+    <!-- ========== Start Stylesheet ========== -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/107525cc11.js"></script>
+   <style type="text/css">
+
+            .model{
+            box-shadow: 4px 3px 14px 7px lightgray;
+            width: 400px;
+            height: 400px;
+            position: absolute;
+            left: 50%;
+            top: 60%;
+            transform: translate(-50%, -50%);
+       }
+       input[type='text'],select{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid lightgray;
+    outline: none;
+  }
+/*  #btns{
+    display: none;
+  }*/
+        </style>
+
+</head>
+<body>
+
+    <div style="background-color: skyblue;" class="p-4">
+        <h4 class="p-2" style="float: left;">Welcome </h4>
+        <div class="p-4">
+      <a href="/" > <button class="btn btn-danger" style="float: right;" >Logout</button></a>
+       </div>
+    </div>
+    </div>
+  {{#each user}}
+  <section style="padding: 4em;">
+      <h4 class="" style="color: gray;">Available food</h4>
+      <div class="table-responsive p-4">
+
+          <table class="table table-hover">
+              <thead>
+                  <tr>
+                      <th>Meal Type</th>
+                      <th>Items in plate</th>
+                      <th>Quantity of food</th>
+                      <th>Get food</th>
+                  </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                   <td> {{meal_type}}</td>
+                  <td> {{item_name}} </td>
+                   <td> {{quantity}} </td>
+                   <td> {{rate}} </td>
+
+                </tr>
+
+              </tbody>
+          </table>
+            <a href="/delete/{{_id}}" class="btn btn-success">Delete</a>
+      </div>
+  </section>
+{{/each}}
+</body>
+</html>

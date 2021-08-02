@@ -1,0 +1,142 @@
+<!DOCTYPE>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale:1.0">
+</head>
+<body>
+
+
+{{#each user}}
+<form action="message" method="post">
+  <div>
+     <label><span style="font-weight:bold">hotel_name:</span> &nbsp; {{employee_name}} </label>
+    <!-- <input type="hidden" name="meal_type" value="{{meal_type}}"></input> -->
+  </div>
+  <br>
+  <div>
+     <label><span style="font-weight:bold">hotel_id:</span> &nbsp; {{employee_id}} </label>
+    <!-- <input type="hidden" name="meal_type" value="{{meal_type}}"></input> -->
+  </div>
+  <br>
+<div>
+   <label><span style="font-weight:bold">meal_type:</span> &nbsp; {{meal_type}} </label>
+  <input type="hidden" name="meal_type" value="{{meal_type}}"></input>
+</div>
+<br>
+<div>
+   <label><span style="font-weight:bold">item_name:</span> &nbsp;{{item_name}}</label>
+  <input type="hidden" name="item_name" value="{{item_name}}"></input>
+</div>
+<br>
+<div>
+   <label><span style="font-weight:bold">quantity:</span> &nbsp;{{quantity}}</label>
+  <input type="hidden" name="quantity" value="{{quantity}}"></input>
+</div>
+<br>
+<!-- <div>
+   <label><span style="font-weight:bold">Rate:</span> &nbsp;{{rate}}</label>
+  <input type="hidden" name="rate" value="{{rate}}"></input>
+</div>
+<br>
+<div>
+   <label><span style="font-weight:bold">Total:</span> &nbsp;{{total}}</label>
+  <input type="hidden" name="total" value="{{total}}"></input>
+</div> -->
+<br>
+   <span><a href="/delete1/{{_id}}">delete</a></span>&nbsp;&nbsp;<span><input type="submit" value="submit"></input></span>
+<br>
+</form>
+<br><br>
+<br>
+{{/each}}
+
+</body>
+</html>
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/107525cc11.js"></script>
+    <title>Admin panel</title>
+    <script
+    src="https://kit.fontawesome.com/64d58efce2.js"
+    crossorigin="anonymous"
+   ></script>
+    <link type="text/css" rel="stylesheet" href="admin_style.css"/>
+
+</head>
+<body>
+ <section id="sidebar">
+    <div class="sidebar-brand">
+        <h2 class="text-center" style="text-shadow: .4em .4em .3em rgba(0, 0, 0, 0.6);font-weight: bolder;letter-spacing: 3px;"><a href="dashboard.html" style="color: white;">NGO</a></h2>
+    </div>
+    <div class="sidebar-menu">
+        <ul>
+            <li><a href="dashboard.html"><span> Home</a></li>
+            <li><a href="ngo.html"><span> NGO</a></li>
+            <li><a href="hotel.html"><span> Hotels</a></li>
+        </ul>
+    </div>
+ </section>
+
+ <section id="main-content">
+   <header class="main-header">
+       <div class="header-left">
+           <h2> Welcome Admin</h2>
+       </div>
+        <div class="header-left">
+            <input class="search-bar" type="text" placeholder="Search Here...">
+            <i class="fa fa-search"></i>
+        </div>
+        <div class="header-left">
+            <img src="user.png" class="img-responsive">
+            <h2>SRIT</h2>
+            <p>Admin</p>
+        </div>
+        <div class="clear"></div>
+   </header>
+ </section>
+
+ {{#each user}}
+ <form action="message" method="post">
+    <section style="padding: 12em;padding-left: 20em;">
+      <div class="table-responsive p-4">
+          <table class="table table-hover">
+              <thead>
+                  <tr>
+                      <th>Meal Type </th>
+                      <th>Items in plate</th>
+                      <th>Quantity of food</th>
+                      <th>Approve</th>
+                      <th>Cancel</th>
+                  </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>{{meal_type}}</th>
+                    <input type="hidden" name="meal_type" value="{{meal_type}}"></input>
+                  <th> {{item_name}}</th>
+                  <input type="hidden" name="item_name" value="{{item_name}}"></input>
+                  <th>{{quantity}}</th>
+                  <input type="hidden" name="quantity" value="{{quantity}}"></input>
+                  <th> <input type="submit" value="submit"></input></th>
+                  <th><a href="/delete1/{{_id}}">delete</a></th>
+                </tr>
+
+              </tbody>
+          </table>
+      </div>
+    </section>
+  </form>
+{{/each}}
+</body>
+</html> -->
